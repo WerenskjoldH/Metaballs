@@ -13,13 +13,12 @@ void main()
 	vec2 fragPosition = gl_FragCoord.xy;
 	fragPosition.y = -1 * fragPosition.y + screenHeight;
 
-	// Using an inverse squared function is extremely simple to explain, as such we use it for the sake of learning. That said, understand that there are more/better options!
-	// Artifacts of this method include growth in size of metaballs as more are added to the scene
+	// Using an exponential distance function, it contains less artifacts and avoids division which is more expensive
 	float sum = 0.0, dist = 0.0;
 	for(int i = 0; i < numMetaballs; i++)
 	{	
 		dist = distance(fragPosition, vec2(metaballArray[2*i], metaballArray[2*i+1]));
-		sum += 100.0 * ((metaballRadiusSquared)/ ((dist*dist) + 0.001));		
+		sum += 100.0 * exp(-1 * 0.0008 * dist * dist);		
 	}
 
 	// Background, outline, and center color
