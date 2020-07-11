@@ -3,6 +3,7 @@
 <h4 align="center">Dynamic and Static Implementation of Blinn's "Blobby Surface" Algorithm</p>
 
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+[![Repository Size](https://img.shields.io/github/repo-size/WerenskjoldH/Metaballs)]()
 
 ---
 
@@ -22,9 +23,14 @@ I'm glad you asked, as mentioned above I created an introductory video in 2019 a
 
 [![Metaballs Algorithm Explained](media/metaballsVideoImg.png)](https://www.youtube.com/watch?v=tEYxodOJadw "Introduction to Metaballs")
 
-##
+## Dependencies
 
-####
+Both of these examples were built using the [SFML 2.5 API](https://www.sfml-dev.org/) for its simplicity and understandability.
+
+## How To Use
+
+1. Clone this repository
+2. Link the appropriate SFML 2.5 library
 
 ---
 
@@ -37,3 +43,22 @@ I'm glad you asked, as mentioned above I created an introductory video in 2019 a
 ### _Q_: Why did you chose SFML?
 
 **A**: SFML is an API for multi-media applications. It allows us to handle a window instance, OpenGL, and input all in one library and avoid a ton of boiler-plate code. Since I wanted to talk more about the algorithm and how simple it was, I didn't want to muddle that point in a complex API. That said, I more often use SDL2. SFML is a tad cluttered with a lot more overhead.
+
+### _Q_: Why is the window black? I have no error!
+
+**A**: That's one joy about using shaders, they aren't so good at letting you know when there is an issue. However, this is most likely an issue of using the wrong .dlls and can be fixed by ensuring you are using the correct library for your target OS. For example, x64 or x86 must use their respective libraries and if you are building Release/Debug you need to ensure you aren't/are using the [...]-d.dll.
+
+Alternatively, I suggest changing
+
+```c++
+metaballShader.loadFromFile("metaballs.vert","metaballs.frag");
+```
+
+to something like
+
+```c++
+if(!metaballShader.loadFromFile("metaballs.vert","metaballs.frag"))
+    std::cout << "ERROR::SHADER::Unable to load shaders\n";
+```
+
+This will ensure the issue is with the shaders and narrow things down.
