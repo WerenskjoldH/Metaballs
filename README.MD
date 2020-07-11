@@ -13,7 +13,7 @@
 
 This repository was created for the code written and discussed in my first Youtube programming tutorial, as linked below.
 
-<p><img width=50% src="media/metaballsDynamicGif.gif"><img width=50% src="media/metaballsStaticImg.png"></p>
+<p><img width=50% src="media/metaballsDynamicGif.gif"><img width=50% src="media/metaballsStaticImg.PNG"></p>
 
 ---
 
@@ -21,7 +21,7 @@ This repository was created for the code written and discussed in my first Youtu
 
 I'm glad you asked, as mentioned above I created an introductory video in 2019 about this topic. Feel free to take a look, but I will admit I wish I could go back and fix quite a few things. None the less, that's what the future is for!
 
-[![Metaballs Algorithm Explained](media/metaballsVideoImg.png)](https://www.youtube.com/watch?v=tEYxodOJadw "Introduction to Metaballs")
+[![Metaballs Algorithm Explained](media/metaballsVideoImg.PNG)](https://www.youtube.com/watch?v=tEYxodOJadw "Introduction to Metaballs")
 
 ## Dependencies
 
