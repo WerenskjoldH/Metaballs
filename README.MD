@@ -34,6 +34,16 @@ Both of these examples were built using the [SFML 2.5 API](https://www.sfml-dev.
 
 ---
 
+## Support
+
+If you are looking for support please send a non-spammy looking email to Rilliden@gmail.com. If you are unsure what to write for the title, try something in this format:
+
+```
+[Repository Name] <Question>
+```
+
+---
+
 ## Q&A
 
 ### _Q_: Why did you include both a static and dynamic implementation in this repository if you wont cover the GLSL implementation?
