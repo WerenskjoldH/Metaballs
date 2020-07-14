@@ -11,7 +11,7 @@
 
 ## Purpose
 
-This repository was created for the code written and discussed in my first Youtube programming tutorial, as linked below.
+This repository was created for the code written and discussed in my first Youtube graphics programming tutorial, as linked below.
 
 <p><img width=50% src="media/metaballsDynamicGif.gif"><img width=50% src="media/metaballsStaticImg.PNG"></p>
 
